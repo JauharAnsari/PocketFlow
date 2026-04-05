@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PocketFlow" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/purple_bg</item>
+        <item name="colorPrimary">@color/purple_primary</item>
+        <item name="colorPrimaryVariant">@color/purple_primary_dark</item>
+        <item name="colorSecondary">@color/purple_accent</item>
+        
+        <!-- Custom attributes for PocketFlow -->
+        <item name="pocketCardBackground">@color/purple_card</item>
+        <item name="pocketCardSecondary">@color/purple_card_secondary</item>
+        <item name="pocketTextPrimary">@color/purple_text_primary</item>
+        <item name="pocketTextSecondary">@color/purple_text_secondary</item>
+        <item name="pocketTextHint">@color/purple_text_hint</item>
+        <item name="pocketIncomeColor">@color/purple_income</item>
+        <item name="pocketExpenseColor">@color/purple_expense</item>
+        <item name="pocketWarningColor">@color/purple_warning</item>
+        <item name="pocketAccentColor">@color/purple_accent</item>
+        <item name="pocketGradient">@drawable/gradient_light</item>
+    </style>
+
+    <style name="Theme.PocketFlow" parent="Base.Theme.PocketFlow" />
+</resources>

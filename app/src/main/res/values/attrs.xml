@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="pocketCardBackground" format="color" />
+    <attr name="pocketCardSecondary" format="color" />
+    <attr name="pocketTextPrimary" format="color" />
+    <attr name="pocketTextSecondary" format="color" />
+    <attr name="pocketTextHint" format="color" />
+    <attr name="pocketIncomeColor" format="color" />
+    <attr name="pocketExpenseColor" format="color" />
+    <attr name="pocketWarningColor" format="color" />
+    <attr name="pocketAccentColor" format="color" />
+    <attr name="pocketGradient" format="reference" />
+</resources>

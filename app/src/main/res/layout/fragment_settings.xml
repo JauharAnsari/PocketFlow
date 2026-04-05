@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/settingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="?attr/pocketTextPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Profile Section -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profileCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_card_premium"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/settingsTitle">
+
+            <ImageView
+                android:id="@+id/profile_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/profile_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="?attr/colorPrimary" />
+
+            <TextView
+                android:id="@+id/profileNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="John Doe"
+                android:textColor="?attr/pocketTextPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/profile_icon"
+                app:layout_constraintTop_toTopOf="@id/profile_icon" />
+
+            <TextView
+                android:id="@+id/profileEmailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="premium_user@pocketflow.app"
+                android:textColor="?attr/pocketTextSecondary"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/profileNameText"
+                app:layout_constraintTop_toBottomOf="@id/profileNameText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Preferences Section -->
+        <TextView
+            android:id="@+id/preferencesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Preferences"
+            android:textColor="?attr/pocketTextPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileCard" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/preferencesCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_card_premium"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/preferencesLabel">
+
+            <!-- Dark Mode Toggle -->
+            <TextView
+                android:id="@+id/darkModeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dark Mode"
+                android:textColor="?attr/pocketTextPrimary"
+                app:layout_constraintBottom_toBottomOf="@id/themeToggle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/themeToggle" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/themeToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Currency Selection -->
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="?attr/pocketCardSecondary"
+                app:layout_constraintTop_toBottomOf="@id/themeToggle" />
+
+            <TextView
+                android:id="@+id/currencyLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Default Currency"
+                android:textColor="?attr/pocketTextPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+            <Spinner
+                android:id="@+id/currencySpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/currencyLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/currencyLabel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Security Section -->
+        <TextView
+            android:id="@+id/securityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Security"
+            android:textColor="?attr/pocketTextPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/preferencesCard" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/securityCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_card_premium"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/securityLabel">
+
+            <TextView
+                android:id="@+id/biometricLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Biometric Lock"
+                android:textColor="?attr/pocketTextPrimary"
+                app:layout_constraintBottom_toBottomOf="@id/biometricToggle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/biometricToggle" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/biometricToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

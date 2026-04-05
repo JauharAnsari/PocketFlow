@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/insightsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spending Insights"
+            android:textColor="?attr/pocketTextPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- High Spending Card -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/highestSpendingCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/pocket_gradient"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@id/insightsTitle">
+
+            <TextView
+                android:id="@+id/highestSpendingLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Highest Spending Category"
+                android:textColor="@color/white"
+                android:alpha="0.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/highestSpendingCategoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food &amp; Dining"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/highestSpendingLabel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Weekly Trend -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/weeklyTrendCard"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card_premium"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/highestSpendingCard">
+
+            <TextView
+                android:id="@+id/weeklyTrendLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weekly Spending"
+                android:textColor="?attr/pocketTextPrimary"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+                android:id="@+id/weeklyTrendChartView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/weeklyTrendLabel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Category Pie Chart -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/categoryChartCard"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card_premium"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/weeklyTrendCard">
+
+            <TextView
+                android:id="@+id/categoryChartLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category Breakdown"
+                android:textColor="?attr/pocketTextPrimary"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+                android:id="@+id/categoryPieChartView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoryChartLabel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
