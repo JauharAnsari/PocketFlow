@@ -93,44 +93,35 @@ PocketFlow follows the **MVVM (Model-View-ViewModel)** architectural pattern to 
 ### ☀️ Light Mode
 
 <p align="center">
-  <img src="screenshots/light![WhatsApp Image 2026-04-05 at 11 5](https://github.com/user-attachments/assets/4cd1c065-d5c0-455a-9679-4f9705d0607c)
-/light_1.jpg" width="18%" alt="Light Screen 1"/>
+  <img src="https://github.com/user-attachments/assets/4cd1c065-d5c0-455a-9679-4f9705d0607c" width="18%" alt="Light Screen 1"/>
   &nbsp;
-  <img src="screenshots/light/li![WhatsApp Image 2026-04-05 at 11 58 45 AM](https://github.com/user-attachments/assets/7b0c400a-6352-48f6-ae30-81c78e7dd3ae)
-ght_2.jpg" width="18%" alt="Light Screen 2"/>
+  <img src="https://github.com/user-attachments/assets/7b0c400a-6352-48f6-ae30-81c78e7dd3ae" width="18%" alt="Light Screen 2"/>
   &nbsp;
-  <img src="screenshots/light/ligh![WhatsApp 6-04-05 at 11 58 45 AM](https://github.com/user-attachments/assets/5b1ee3c2-3a9b-415d-980c-5bed812b05be)
-t_3.jpg" width="18%" alt="Light Screen 3"/>
+  <img src="https://github.com/user-attachments/assets/5b1ee3c2-3a9b-415d-980c-5bed812b05be" width="18%" alt="Light Screen 3"/>
   &nbsp;
-  <img src="screenshots/light/![WhatsApp Image 2026--05 at 11 58 46 AM](https://github.com/user-attachments/assets/4f3bd10f-6181-441c-a14d-8fc074105f8a)
-light_4.jpg" width="18%" alt="Light Screen 4"/>
+  <img src="https://github.com/user-attachments/assets/4f3bd10f-6181-441c-a14d-8fc074105f8a" width="18%" alt="Light Screen 4"/>
   &nbsp;
-  <img src="screenshots/light/light![WhatsApp Image 05 at 11 58 46 AM](https://github.com/user-attachments/assets/151ca21b-e803-4887-8255-0f36b100eb6c)
-_5.jpg" width="18%" alt="Light Screen 5"/>
+  <img src="https://github.com/user-attachments/assets/151ca21b-e803-4887-8255-0f36b100eb6c" width="18%" alt="Light Screen 5"/>
 </p>
 
 ### 🌙 Dark Mode
 
 <p align="center">
-  <img src="screenshots/dark/dark_1.jpg" width="18%" alt="Dark Screen 1"/>
+  <img src="https://github.com/user-attachments/assets/c34ff5d7-e524-48ed-8a0a-894c3c5e849f" width="18%" alt="Dark Screen 1"/>
   &nbsp;
-  <img src="screenshots/dark/dark_2.jpg" width="18%" alt="Dark Screen 2"/>
+  <img src="https://github.com/user-attachments/assets/66287d88-74f0-4522-acf7-a6ef27979f37" width="18%" alt="Dark Screen 2"/>
   &nbsp;
-  <img src="screenshots/dark/dark_3.jpg" width="18%" alt="Dark Screen 3"/>
+  <img src="https://github.com/user-attachments/assets/ff15ae1d-2d14-4fdb-83ad-899ed437ecf6" width="18%" alt="Dark Screen 3"/>
   &nbsp;
-  <img src="screenshots/dark/dark_4.jpg" width="18%" alt="Dark Screen 4"/>
+  <img src="https://github.com/user-attachments/assets/06e8fe55-0120-4212-aadb-56a3fa9212fc" width="18%" alt="Dark Screen 4"/>
   &nbsp;
-  <img src="screenshots/dark/dark_5.jpg" width="18%" alt="Dark Screen 5"/>
+  <img src="https://github.com/user-attachments/assets/05efc3b7-7f42-4dc9-b1e0-89f444541593" width="18%" alt="Dark Screen 5"/>
 </p>
 
 > [!TIP]
 > Enable Dark Mode on your device to experience the premium gradients and refined UI in full effect.
 
 ---
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
