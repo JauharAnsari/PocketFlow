@@ -24,7 +24,7 @@
 - Recent transactions at a glance for quick tracking.
 
 ### 🔐 Unmatched Security
-- **Biometric Login**: Secure your financial data with integrated Fingerprint and Face ID support.
+- **Biometric Login**: Secure your financial data with integrated Fingerprint.
 - **Privacy First**: Secure local-only storage ensures your data never leaves your device.
 
 ### ⚡ Smooth Interactions
