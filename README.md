@@ -16,27 +16,46 @@
 
 ---
 
-## ✨ Key Features
+## ✨ Key Features by Fragment
 
-### 🏢 Premium Dashboard
-- Get an instant overview of your Balance, Income, and Expenses.
-- Beautiful, interactive charts to visualize spending categories.
-- Recent transactions at a glance for quick tracking.
+### 🏠 Home Dashboard
+The command center of your finances.
+- **Real-time Summaries**: Instantly view your total Balance, monthly Income, and monthly Expenses.
+- **Visual Progress**: Quick-glance progress indicators for your overall financial health.
+- **Recent Transactions**: Stay updated with a list of your most recent 5 transactions.
+- **Quick Entry**: A prominent Floating Button to jump straight into adding a new transaction.
 
-### 🔐 Unmatched Security
-- **Biometric Login**: Secure your financial data with integrated Fingerprint.
-- **Privacy First**: Secure local-only storage ensures your data never leaves your device.
+### 📜 Transaction History
+A comprehensive and interactive log of every penny spent or earned.
+- **Smart Filtering**: Filter transactions by Type (Income/Expense) and Timeframe (Today, Week, Month, All).
+- **Search Functionality**: A powerful real-time search bar to find transactions by category or notes.
+- **Quick Gestures**:
+  - ⬅️ **Swipe Left**: Delete a transaction instantly (with an Undo Snackbar for safety).
+  - ➡️ **Swipe Right**: Jump directly into Edit mode for any transaction.
+- **Categorized View**: Each entry is clearly marked with its category and formatted date/time.
 
-### ⚡ Smooth Interactions
-- **Advanced History**: Search, filter, and sort your transactions with zero lag.
-- **Quick Gestures**: 
-  - ⬅️ **Swipe Left** to quickly delete a transaction (with Undo support).
-  - ➡️ **Swipe Right** to instantly edit a transaction.
-- **Splash Screen**: A beautifully animated entry point that sets the tone for a premium experience.
+### ➕ Add / Edit Transaction
+A streamlined interface for capturing financial data.
+- **Intuitive Inputs**: Easy-to-use numeric input, type toggle (Income/Expense), and category selector.
+- **Edit Mode**: The screen intelligently adapts to edit existing records, pre-filling all data and labels.
+- **Data Integrity**: Updates existing records while preserving the original timestamp and ID.
 
-### 📊 Smart Budgeting
-- Set monthly limits for different categories (Food, Transport, Bills, etc.).
-- Real-time tracking and alerts when you're approaching your budget limits.
+### 🎯 Budgets & Goals
+Take control of your spending habits with smart limits.
+- **Category Budgets**: Set specific monthly spending limits for categories like Food, Bills, Transport, etc.
+- **Visual Tracking**: Real-time progress bars showing exactly how much of your budget remains.
+- **Smart Alerts**: Integrated notification system that warns you when a category budget is exceeded.
+
+### 📊 Insights & Analytics
+Visualize your financial patterns with beautiful data representations.
+- **Spending Breakdown**: A high-fidelity Pie Chart displaying your expense distribution across categories.
+- **Trend Analysis**: Compare spending habits over time to identify areas where you can save.
+
+### ⚙️ Settings & Security
+Personalize your experience and secure your data.
+- **Profile Management**: Update your user profile and personalization settings.
+- **Biometric Security**: Toggle Fingerprint  for app entry.
+- **Theme Support**: Seamlessly adapts to both Light and Dark system themes.
 
 ---
 
@@ -44,9 +63,9 @@
 
 - **UI/UX**: Material 3 Design, Lottie Animations, Shimmer Loading, AAChartCore.
 - **Core**: Kotlin, Jetpack Components (Navigation, ViewModel, LiveData).
-- **Persistence**: Room Database with Coroutines and StateFlow.
-- **Image Loading**: Glide for smooth profile and icon rendering.
-- **Background Actions**: WorkManager for scheduled notifications and cleanups.
+- **Persistence**: Room Database with Coroutines and StateFlow for secure, local data storage.
+- **Security**: Biometric API for contactless and secure authentication.
+- **Architecture**: MVVM (Model-View-ViewModel) with Clean Architecture principles.
 
 ---
 
