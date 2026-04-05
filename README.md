@@ -4,7 +4,7 @@
 [![Android](https://img.shields.io/badge/Platform-Android-green.svg)](https://developer.android.com)
 [![Architecture](https://img.shields.io/badge/Architecture-MVVM-orange.svg)](https://developer.android.com/topic/libraries/architecture)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Download APK](https://img.shields.io/badge/Download-APK-brightgreen?style=for-the-badge&logo=android)](https://drive.google.com/file/d/1Of7-xIJuU99WafAq7kF3o2JMWlBXro5B/view?usp=drivesdk)
+[![Download APK](https://img.shields.io/badge/Download-APK-brightgreen?style=for-the-badge&logo=android)](https://drive.google.com/file/d/1J79qCjWtOdVNMgW6u746fWnO6aYk0lTF/view?usp=drivesdk)
 
 **PocketFlow** is a premium, high-performance personal finance manager built with a focus on aesthetics, speed, and security. Designed to help you track your expenses, manage budgets, and visualize your financial health with ease.
 
@@ -79,7 +79,7 @@ Personalize your experience and secure your data.
 
 **Option 1 — Direct APK Download (Recommended)**
 
-👉 [**Download PocketFlow APK**](https://drive.google.com/file/d/1Of7-xIJuU99WafAq7kF3o2JMWlBXro5B/view?usp=drivesdk)
+👉 [**Download PocketFlow APK**](https://drive.google.com/file/d/1J79qCjWtOdVNMgW6u746fWnO6aYk0lTF/view?usp=drivesdk)
 
 1. Download the APK from the link above.
 2. Enable **Install from Unknown Sources** in your Android settings.
