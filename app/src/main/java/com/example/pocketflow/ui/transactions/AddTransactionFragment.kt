@@ -29,11 +29,44 @@ class AddTransactionFragment : Fragment() {
         return binding.root
     }
 
+    private var editTransactionId: Long = -1L
+    private var originalTimestamp: Long = -1L
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         setupCategorySpinner()
+        
+        // Check for edit mode
+        editTransactionId = arguments?.getLong("transactionId", -1L) ?: -1L
+        if (editTransactionId != -1L) {
+            setupEditMode()
+        }
+        
         setupSaveButton()
+    }
+
+    private fun setupEditMode() {
+        val transaction = transactionViewModel.getTransactionById(editTransactionId)
+        transaction?.let {
+            originalTimestamp = it.dateTime
+            binding.amountInput.setText(it.amount.toString())
+            
+            if (it.type == "INCOME") {
+                binding.incomeButton.isChecked = true
+            } else {
+                binding.expenseButton.isChecked = true
+            }
+            
+            val categories = arrayOf("Food", "Transport", "Shopping", "Bills", "Health", "Entertainment", "Other")
+            val index = categories.indexOf(it.category)
+            if (index != -1) {
+                binding.categorySpinner.setSelection(index)
+            }
+            
+            binding.saveButton.text = "Update Transaction"
+            // Change title text if it exists in layout, or just button
+        }
     }
 
     private fun setupCategorySpinner() {
@@ -52,10 +85,11 @@ class AddTransactionFragment : Fragment() {
                 val category = binding.categorySpinner.selectedItem.toString()
                 
                 val transaction = Transaction(
+                    id = if (editTransactionId != -1L) editTransactionId else 0,
                     amount = amount,
                     type = type,
                     category = category,
-                    dateTime = System.currentTimeMillis(),
+                    dateTime = if (originalTimestamp != -1L) originalTimestamp else System.currentTimeMillis(),
                     currencyCode = "INR"
                 )
                 

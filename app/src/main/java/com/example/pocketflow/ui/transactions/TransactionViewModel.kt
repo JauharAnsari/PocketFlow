@@ -117,6 +117,10 @@ class TransactionViewModel(application: Application, private val repository: Fin
     fun delete(transaction: Transaction) = viewModelScope.launch {
         repository.deleteTransaction(transaction)
     }
+
+    fun getTransactionById(id: Long): Transaction? {
+        return filteredTransactions.value?.find { it.id == id }
+    }
 }
 
 class TransactionViewModelFactory(private val application: Application, private val repository: FinanceRepository) : ViewModelProvider.Factory {

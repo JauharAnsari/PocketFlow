@@ -8,9 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
 import com.example.pocketflow.PocketFlowApplication
+import com.example.pocketflow.R
 import com.example.pocketflow.databinding.FragmentTransactionListBinding
+import com.example.pocketflow.data.entities.Transaction
 
 class TransactionListFragment : Fragment() {
 
@@ -38,6 +44,7 @@ class TransactionListFragment : Fragment() {
         setupObservers()
         setupSearch()
         setupFilterButton()
+        setupSwipeToDelete()
     }
 
     private fun setupFilterButton() {
@@ -66,6 +73,45 @@ class TransactionListFragment : Fragment() {
             }
             override fun afterTextChanged(s: Editable?) {}
         })
+    }
+
+    private fun setupSwipeToDelete() {
+        val itemTouchHelperCallback = object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder
+            ): Boolean {
+                return false
+            }
+
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                val position = viewHolder.adapterPosition
+                val transaction = transactionAdapter.currentList[position]
+
+                if (direction == ItemTouchHelper.LEFT) {
+                    // Delete the transaction
+                    transactionViewModel.delete(transaction)
+
+                    // Show Snackbar with Undo option
+                    Snackbar.make(binding.root, "Transaction deleted", Snackbar.LENGTH_LONG)
+                        .setAction("Undo") {
+                            transactionViewModel.insert(transaction)
+                        }.show()
+                } else if (direction == ItemTouchHelper.RIGHT) {
+                    // Edit the transaction
+                    val bundle = Bundle().apply {
+                        putLong("transactionId", transaction.id)
+                    }
+                    findNavController().navigate(R.id.navigation_add_transaction, bundle)
+                    
+                    // Reset the item position so it stays in the list
+                    transactionAdapter.notifyItemChanged(position)
+                }
+            }
+        }
+
+        ItemTouchHelper(itemTouchHelperCallback).attachToRecyclerView(binding.transactionList)
     }
 
     override fun onDestroyView() {

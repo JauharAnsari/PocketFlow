@@ -39,6 +39,11 @@
         android:id="@+id/navigation_add_transaction"
         android:name="com.example.pocketflow.ui.transactions.AddTransactionFragment"
         android:label="Add Transaction"
-        tools:layout="@layout/fragment_add_transaction" />
+        tools:layout="@layout/fragment_add_transaction">
+        <argument
+            android:name="transactionId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+    </fragment>
 
 </navigation>
