@@ -38,7 +38,6 @@ class SettingsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupThemeToggle()
-        setupCurrencySpinner()
         setupBiometricToggle()
         setupProfileCard()
     }
@@ -86,12 +85,6 @@ class SettingsFragment : Fragment() {
         }
     }
 
-    private fun setupCurrencySpinner() {
-        val currencies = arrayOf("INR (₹)", "USD ($)", "EUR (€)", "GBP (£)")
-        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, currencies)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        binding.currencySpinner.adapter = adapter
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()
